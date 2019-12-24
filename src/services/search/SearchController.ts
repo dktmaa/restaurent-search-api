@@ -1,7 +1,7 @@
  import Restaurents from '../search/models'
 import { Restaurent, searchQuery, filterQuery } from './interfaces'
 import { HTTP404Error, HTTP400Error } from '../../utils/httpErrors'
-import { filter } from 'bluebird'
+
 
 
 // Returns list of restaurent on various filter criteria

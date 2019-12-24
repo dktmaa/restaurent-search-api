@@ -27,9 +27,12 @@ applyMiddleware(middleware, router);
 applyRoutes(routes, router);
 applyMiddleware(errorHandlers, router);
 
-const { PORT = 3001 } = process.env;
+const { PORT = 3000 } = process.env;
 const server = http.createServer(router);
 
+router.use('/health', (req, res) => {
+  res.end('<html><h1>Restaurent Search API</h1></html>')
+})
 server.listen(PORT, () =>
   console.log(`Server is running http://localhost:${PORT}...`)
 );
